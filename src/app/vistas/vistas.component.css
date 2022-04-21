@@ -4,4 +4,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 4px;
+    flex-grow: 2;
 }
+
+/* .tabla{
+    border-color: #aaaaaa;
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+} */

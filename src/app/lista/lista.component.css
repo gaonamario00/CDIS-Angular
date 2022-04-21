@@ -1,0 +1,6 @@
+.lista{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e0dfdc;
+    margin-top: 6px;
+}
