@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { VistasComponent } from './vistas/vistas.component';
 import { ListaComponent } from './lista/lista.component';
 import { ModalDetalleComponent } from './modal-detalle/modal-detalle.component';
+import { TableComponent } from './table/table.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ModalDetalleComponent } from './modal-detalle/modal-detalle.component';
     HeaderComponent,
     VistasComponent,
     ListaComponent,
-    ModalDetalleComponent
+    ModalDetalleComponent,
+    TableComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,9 @@
     flex-grow: 2;
 }
 
-.lista{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
+.boton{
+    width: 100%;
+    border-radius: 0%;
 }
 
 /* .tabla{

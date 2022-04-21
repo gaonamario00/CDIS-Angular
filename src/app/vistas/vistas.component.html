@@ -1,6 +1,4 @@
-<div class="vistas">
-    <div class="tabla">Tabla</div>
-    <div class="lista">Lista</div>
-</div>
-
-<app-lista></app-lista>
+<nav class="vistas">
+    <button routerLink="/lista" class="boton {{isLista? 'btn btn-primary' : 'btn btn-secondary'}}" (click)="lista()">Lista</button>
+    <button routerLink="/table" class="boton {{isTable? 'btn btn-primary' : 'btn btn-secondary'}}" (click)="table()">Tabla</button>
+</nav>

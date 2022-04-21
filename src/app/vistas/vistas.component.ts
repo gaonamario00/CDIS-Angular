@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistasComponent implements OnInit {
 
+  isLista: boolean = true;
+  isTable:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  lista(){
+    this.isLista = true;
+    this.isTable = false;
+  }
+
+  table(){
+    this.isLista = false;
+    this.isTable = true;
   }
 
 }
