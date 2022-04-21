@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AUTOMOVILES } from '../data';
-import { Automovil } from '../models';
+import { AUTOMOVILES } from '../../models/data';
+import { Automovil } from '../../models/models';
 
 @Component({
   selector: 'app-table',

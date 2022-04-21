@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AUTOMOVILES } from '../data';
+import { AUTOMOVILES } from '../../models/data';
 import { ModalDetalleComponent } from '../modal-detalle/modal-detalle.component';
-import { Automovil } from '../models';
+import { Automovil } from '../../models//models';
 
 @Component({
   selector: 'app-lista',
