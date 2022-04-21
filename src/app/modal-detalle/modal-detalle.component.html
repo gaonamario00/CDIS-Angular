@@ -1,0 +1,15 @@
+<div class="modal1">
+  <div class="modal-header">
+    <h4 class="modal-title">{{auto.marca}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Submarca: {{auto.submarca}}</p>
+    <p>Modelo: {{auto.modelo}}</p>
+    <p>Descripcion: {{auto.descripcion}}</p>
+  </div>
+  <div class="footerModal modal-footer">
+    <p>{{fecha}}</p>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

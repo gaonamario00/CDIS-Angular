@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AUTOMOVILES } from '../data';
+import { ModalDetalleComponent } from '../modal-detalle/modal-detalle.component';
 import { Automovil } from '../models';
 
 @Component({
@@ -11,10 +13,15 @@ export class ListaComponent implements OnInit {
 
   autos: Automovil[] = [];
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.autos = AUTOMOVILES;
+  }
+
+  open(auto:Automovil) {
+    const modalRef = this.modalService.open(ModalDetalleComponent);
+    modalRef.componentInstance.auto = auto;
   }
 
 }

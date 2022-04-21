@@ -1,6 +1,7 @@
  <div *ngFor="let auto of autos" class="lista">
-    <i class="fa-solid fa-eye"></i>
-    <div><label style="font-family: 'Orelega One', cursive;">
+    <i class="icono fa-solid fa-eye" (click)="open(auto)"></i>
+    <div><label class="des">
         <b>{{auto.descripcion}}</b>
     </label></div>
 </div>
+

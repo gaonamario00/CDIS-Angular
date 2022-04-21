@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { VistasComponent } from './vistas/vistas.component';
 import { ListaComponent } from './lista/lista.component';
+import { ModalDetalleComponent } from './modal-detalle/modal-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     VistasComponent,
-    ListaComponent
+    ListaComponent,
+    ModalDetalleComponent
   ],
   imports: [
     BrowserModule,
