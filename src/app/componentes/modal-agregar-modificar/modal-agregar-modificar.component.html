@@ -9,22 +9,42 @@
 
     <div class="form-group">
       <label for="marca"><b>Marca</b></label>
-      <input id="marca" type="text" class="form-control" [(ngModel)]="auto.marca" required>
+      <input id="marca" type="text" class="form-control" [(ngModel)]="auto.marca" required
+      name="marca" #marca="ngModel" minlength="4" >
+    </div>
+
+    <div *ngIf="marca.invalid && (marca.dirty || marca.touched)" class="alert alert-danger" style="height:30px; padding-top: 0%;">
+      <div *ngIf="marca.errors">Marca invalida</div>
     </div>
 
     <div class="form-group">
       <label for="submarca"><b>Submarca</b></label>
-      <input id="submarca" type="text" class="form-control" [(ngModel)]="auto.submarca" required>
+      <input id="submarca" type="text" class="form-control" [(ngModel)]="auto.submarca" required
+      name="submarca" #submarca="ngModel" minlength="4">
+    </div>
+
+    <div *ngIf="submarca.invalid && (submarca.dirty || submarca.touched)" class="alert alert-danger" style="height:30px; padding-top: 0%;">
+      <div *ngIf="submarca.errors">Submarca invalida</div>
     </div>
 
     <div class="form-group">
       <label for="descripcion"><b>Descripcion</b></label>
-      <input id="descripcion" type="text" class="form-control" [(ngModel)]="auto.descripcion">
+      <input id="descripcion" type="text" class="form-control" [(ngModel)]="auto.descripcion" required
+      name="descripcion" #descripcion="ngModel" minlength="4">
+    </div>
+
+    <div *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)" class="alert alert-danger" style="height:30px; padding-top: 0%;">
+      <div *ngIf="descripcion.errors">Descripcion invalida</div>
     </div>
 
     <div class="form-group">
       <label for="modelos"><b>Modelos </b><label *ngIf="!isModelsCorrect">: deben ser años de 2000-2022</label></label>
-      <input id="modelos" type="text" class="form-control" [(ngModel)]="modelosStr" placeholder="2016,2017,2018,2019,2020,2021,2022">
+      <input id="modelos" type="text" class="form-control" [(ngModel)]="modelosStr" placeholder="2016,2017,2018,2019,2020,2021,2022" required
+      name="modelos" #modelos="ngModel" minlength="4">
+    </div>
+
+    <div *ngIf="modelos.invalid && (modelos.dirty || modelos.touched)" class="alert alert-danger" style="height:30px; padding-top: 0%;">
+      <div *ngIf="modelos.errors">Los modelos no son validos</div>
     </div>
 
   </div>

@@ -35,11 +35,11 @@ export class ModalAgregarModificarComponent implements OnInit {
     } else {
       const AUTO: Automovil = {
         modelos: [],
-        descripcion: 'string',
-        descripcioncorta: 'string',
-        marca: 'string',
-        submarca: 'string',
-        Ocupantes: 'string',
+        descripcion: '',
+        descripcioncorta: '',
+        marca: '',
+        submarca: '',
+        Ocupantes: '',
       };
       this.auto = AUTO;
     }

@@ -18,7 +18,7 @@
             <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize">
                 <th scope="row">{{auto.marca}}</th>
                 <td>{{auto.modelos[0]}}&nbsp;{{auto.modelos[1]}}&nbsp;{{auto.modelos[2]}}<label
-                        *ngIf="auto.modelos.length>3">&nbsp;&nbsp;Ver mas...</label></td>
+                        *ngIf="auto.modelos.length>3">&nbsp;...</label></td>
                 <td class="text-truncate">{{auto.descripcioncorta}}</td>
                 <td><i class="icono fa-solid fa-pen" (click)="open(false, auto)"></i></td>
                 <td><i class="icono fa-solid fa-trash-can" (click)="openConfirmModal(auto)"></i></td>

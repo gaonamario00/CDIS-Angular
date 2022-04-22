@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './componentes/page-not-found/page-not-fou
 import { ModalAgregarModificarComponent } from './componentes/modal-agregar-modificar/modal-agregar-modificar.component';
 import { FormsModule } from '@angular/forms';
 import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm.component';
+import { ModelsInputDirective } from './directives/models-input.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm
     PageNotFoundComponent,
     ModalAgregarModificarComponent,
     ModalConfirmComponent,
+    ModelsInputDirective,
   ],
   imports: [
     BrowserModule,
