@@ -20,11 +20,11 @@ export class ModalConfirmComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  eliminar(auto: Automovil){
-    this.autosService.deleteAuto(auto).subscribe((res)=>{
-      alert("Registro eliminado con exito!");
-      this.activeModal.close();
-    });
-  }
+  // eliminar(auto: Automovil){
+  //   this.autosService.deleteAuto(auto).subscribe((res)=>{
+  //     alert("Registro eliminado con exito!");
+  //     this.activeModal.close();
+  //   });
+  // }
 
 }
