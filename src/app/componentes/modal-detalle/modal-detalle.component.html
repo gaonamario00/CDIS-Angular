@@ -5,9 +5,10 @@
   </div>
   <div class="modal-body">
     <p>Submarca: {{auto.submarca}}</p>
-    <label>Modelos: </label>
+    
     <div *ngFor="let modelo of auto.modelos; let indice=index">
-      <label *ngIf="indice%10==0">
+      <label *ngIf="indice==0">Modelos:&nbsp;</label>
+      <label *ngIf="indice%9==0">
         {{auto.modelos[indice]}} {{auto.modelos[indice+1]}} {{auto.modelos[indice+2]}} {{auto.modelos[indice+3]}} {{auto.modelos[indice+4]}} 
         {{auto.modelos[indice+5]}} {{auto.modelos[indice+6]}} {{auto.modelos[indice+7]}} {{auto.modelos[indice+8]}} {{auto.modelos[indice+9]}}
       </label>

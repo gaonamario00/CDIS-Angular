@@ -1,7 +1,15 @@
- <div *ngFor="let auto of autos" class="lista">
+ <div *ngIf="isLoading">
+  <div *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize" class="lista">
     <i class="icono fa-solid fa-eye" (click)="open(auto)"></i>
     <div><label class="des">
         <b>{{auto.descripcioncorta}}</b>
     </label></div>
-</div>
+</div>   
+ </div>
+ 
 
+<ngb-pagination *ngIf="isLoading" class="center" [(page)]="page" [pageSize]="pageSize" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" [collectionSize]="autos.length"></ngb-pagination>
+
+<div *ngIf="!isLoading" class="d-flex centrarSpinner">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>

@@ -11,7 +11,10 @@ import { AutosService } from 'src/app/services/autos.service';
 })
 export class ListaComponent implements OnInit {
 
+  page=1;
+  pageSize=10;
   autos: Automovil[] = [];
+  isLoading = false;
 
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
@@ -19,6 +22,7 @@ export class ListaComponent implements OnInit {
     this.autoService.getAutos().subscribe((data:any)=>{
       this.autos = data.data;
       console.log(this.autos);
+      this.isLoading = true;
     });
   }
 
