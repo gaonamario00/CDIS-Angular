@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AUTOMOVILES } from '../../models/data';
 import { ModalDetalleComponent } from '../modal-detalle/modal-detalle.component';
 import { Automovil } from '../../models//models';
+import { AutosService } from 'src/app/services/autos.service';
 
 @Component({
   selector: 'app-lista',
@@ -13,10 +13,13 @@ export class ListaComponent implements OnInit {
 
   autos: Automovil[] = [];
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
   ngOnInit(): void {
-    this.autos = AUTOMOVILES;
+    this.autoService.getAutos().subscribe((data:any)=>{
+      this.autos = data.data;
+      console.log(this.autos);
+    });
   }
 
   open(auto:Automovil) {

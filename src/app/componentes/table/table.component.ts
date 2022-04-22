@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AUTOMOVILES } from '../../models/data';
+import { AutosService } from 'src/app/services/autos.service';
 import { Automovil } from '../../models/models';
 
 @Component({
@@ -11,10 +11,13 @@ export class TableComponent implements OnInit {
 
   autos!: Automovil[];
 
-  constructor() { }
+  constructor(private autosService: AutosService) { }
 
   ngOnInit(): void {
-    this.autos = AUTOMOVILES;
+    this.autosService.getAutos().subscribe((data:any)=>{
+      this.autos = data.data;
+      console.log(this.autos);
+    });
   }
 
 }

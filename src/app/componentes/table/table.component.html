@@ -2,8 +2,8 @@
     <thead>
         <tr>
             <th scope="col">Marca</th>
-            <th scope="col">Modelo</th>
-            <th scope="col">Descripcion</th>
+            <th scope="col">Modelos</th>
+            <th scope="col">DescripcionCorta</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
         </tr>
@@ -11,8 +11,8 @@
     <tbody>
         <tr *ngFor="let auto of autos">
             <th scope="row">{{auto.marca}}</th>
-            <td>{{auto.modelo}}</td>
-            <td>{{auto.descripcion}}</td>
+            <td>{{auto.modelos[0]}}&nbsp;{{auto.modelos[1]}}&nbsp;{{auto.modelos[2]}}<label *ngIf="auto.modelos.length>3">&nbsp;&nbsp;Ver mas...</label></td>
+            <td class="text-truncate">{{auto.descripcioncorta}}</td>
             <td><i class="fa-solid fa-pen"></i></td>
             <td><i class="fa-solid fa-trash-can"></i></td>
         </tr>

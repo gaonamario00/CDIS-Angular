@@ -1,7 +1,10 @@
 export interface Automovil {
-    marca: string;
-    submarca: string;
-    modelo: number;
-    descripcion: string;
-    fecha_registro: Date;
+    modelos: number[],
+    _id: number,
+    descripcion: string,
+    descripcioncorta: string,
+    marca: string,
+    submarca: string,
+    Ocupantes: string,
+    Cveveh: number
 }

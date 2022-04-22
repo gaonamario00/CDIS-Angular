@@ -15,6 +15,6 @@ export class ModalDetalleComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal) {
   }
   ngOnInit(): void {
-    this.fecha = Intl.DateTimeFormat("es-MX", { timeStyle: "short", dateStyle: "full"}).format(this.auto.fecha_registro);
+    // this.fecha = Intl.DateTimeFormat("es-MX", { timeStyle: "short", dateStyle: "full"}).format(this.auto.fecha_registro);
   }
 }

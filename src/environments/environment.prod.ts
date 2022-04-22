@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlAutos: "https://catalogo-autos.herokuapp.com/api/autos"
 };
