@@ -10,6 +10,8 @@ import { ListaComponent } from './componentes/lista/lista.component';
 import { ModalDetalleComponent } from './componentes/modal-detalle/modal-detalle.component';
 import { TableComponent } from './componentes/table/table.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
+import { ModalAgregarModificarComponent } from './componentes/modal-agregar-modificar/modal-agregar-modificar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { PageNotFoundComponent } from './componentes/page-not-found/page-not-fou
     ModalDetalleComponent,
     TableComponent,
     PageNotFoundComponent,
+    ModalAgregarModificarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

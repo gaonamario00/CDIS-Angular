@@ -1,3 +1,8 @@
+
+<div class="center">
+    <button class="boton btn btn-success" (click)="open(true)">Agregar un nuevo auto&nbsp;&nbsp;<i class="fa-solid fa-circle-plus"></i></button>
+</div>
+
 <div *ngIf="isLoading">
     <table class="table table-striped">
         <thead>
@@ -15,8 +20,8 @@
                 <td>{{auto.modelos[0]}}&nbsp;{{auto.modelos[1]}}&nbsp;{{auto.modelos[2]}}<label
                         *ngIf="auto.modelos.length>3">&nbsp;&nbsp;Ver mas...</label></td>
                 <td class="text-truncate">{{auto.descripcioncorta}}</td>
-                <td><i class="fa-solid fa-pen"></i></td>
-                <td><i class="fa-solid fa-trash-can"></i></td>
+                <td><i class="icono fa-solid fa-pen" (click)="open(false)"></i></td>
+                <td><i class="icono fa-solid fa-trash-can"></i></td>
             </tr>
         </tbody>
     </table>
