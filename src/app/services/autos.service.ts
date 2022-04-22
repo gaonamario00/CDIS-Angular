@@ -15,4 +15,15 @@ export class AutosService {
     return this.http.get<Automovil[]>(environment.urlAutos);
   }
 
+  updateAutos(auto: Automovil){
+    return this.http.put<any>(`${environment.urlAutos}/${auto._id}`,auto);
+  }
+
+  deleteAuto(auto:Automovil){
+    return this.http.delete<any>(`${environment.urlAutos}/${auto._id}`);
+  }
+
+  addAutos():void{
+
+  }
 }

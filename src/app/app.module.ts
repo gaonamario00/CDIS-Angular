@@ -12,6 +12,7 @@ import { TableComponent } from './componentes/table/table.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 import { ModalAgregarModificarComponent } from './componentes/modal-agregar-modificar/modal-agregar-modificar.component';
 import { FormsModule } from '@angular/forms';
+import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     TableComponent,
     PageNotFoundComponent,
     ModalAgregarModificarComponent,
+    ModalConfirmComponent,
   ],
   imports: [
     BrowserModule,

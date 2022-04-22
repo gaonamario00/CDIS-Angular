@@ -9,29 +9,29 @@
 
     <div class="form-group">
       <label for="marca"><b>Marca</b></label>
-      <input id="marca" type="text" class="form-control">
+      <input id="marca" type="text" class="form-control" [(ngModel)]="auto.marca" required>
     </div>
 
     <div class="form-group">
       <label for="submarca"><b>Submarca</b></label>
-      <input id="submarca" type="text" class="form-control">
+      <input id="submarca" type="text" class="form-control" [(ngModel)]="auto.submarca" required>
     </div>
 
     <div class="form-group">
       <label for="descripcion"><b>Descripcion</b></label>
-      <input id="descripcion" type="text" class="form-control">
+      <input id="descripcion" type="text" class="form-control" [(ngModel)]="auto.descripcion">
     </div>
 
     <div class="form-group">
-      <label for="modelos"><b>Modelos</b></label>
-      <input id="modelos" type="text" class="form-control">
+      <label for="modelos"><b>Modelos </b><label *ngIf="!isModelsCorrect">: deben ser años de 2000-2022</label></label>
+      <input id="modelos" type="text" class="form-control" [(ngModel)]="modelosStr" placeholder="2016,2017,2018,2019,2020,2021,2022">
     </div>
 
   </div>
 
   <div class="footerModal modal-footer">
-    <button class="boton btn btn-success">Agregar</button>
-    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
+    <button class="boton btn btn-success" (click)="isMode()">Aceptar</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Cancelar</button>
   </div>
 
 </div>
