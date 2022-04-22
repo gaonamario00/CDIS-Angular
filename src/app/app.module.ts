@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm.component';
 import { ModelsInputDirective } from './directives/models-input.directive';
 import { FormatoModeloPipe } from './pipes/formato-modelo.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FormatoModeloPipe } from './pipes/formato-modelo.pipe';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

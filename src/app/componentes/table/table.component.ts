@@ -11,11 +11,13 @@ import { ModalConfirmComponent } from '../modal-confirm/modal-confirm.component'
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
-  autos!: Automovil[];
+  autos: any[] = [];
 
   public page = 1;
   public pageSize = 10;
   isLoading = false;
+
+  searchText: string = "";
 
   constructor(
     private autosService: AutosService,
