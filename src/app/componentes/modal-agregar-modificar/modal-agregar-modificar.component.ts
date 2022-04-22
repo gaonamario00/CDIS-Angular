@@ -56,7 +56,6 @@ export class ModalAgregarModificarComponent implements OnInit {
       alert('Registro actualizado con exito!');
       this.activeModal.close();
     });
-    this.modelosStr = "";
   }
 
   agregarAuto(){

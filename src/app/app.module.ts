@@ -14,6 +14,7 @@ import { ModalAgregarModificarComponent } from './componentes/modal-agregar-modi
 import { FormsModule } from '@angular/forms';
 import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm.component';
 import { ModelsInputDirective } from './directives/models-input.directive';
+import { FormatoModeloPipe } from './pipes/formato-modelo.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ModelsInputDirective } from './directives/models-input.directive';
     ModalAgregarModificarComponent,
     ModalConfirmComponent,
     ModelsInputDirective,
+    FormatoModeloPipe,
   ],
   imports: [
     BrowserModule,

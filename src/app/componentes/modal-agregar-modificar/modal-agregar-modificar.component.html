@@ -20,7 +20,7 @@
     <div class="form-group">
       <label for="submarca"><b>Submarca</b></label>
       <input id="submarca" type="text" class="form-control" [(ngModel)]="auto.submarca" required
-      name="submarca" #submarca="ngModel" minlength="4">
+      name="submarca" #submarca="ngModel" minlength="1">
     </div>
 
     <div *ngIf="submarca.invalid && (submarca.dirty || submarca.touched)" class="alert alert-danger" style="height:30px; padding-top: 0%;">
