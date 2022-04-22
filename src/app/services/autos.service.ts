@@ -23,7 +23,7 @@ export class AutosService {
     return this.http.delete<any>(`${environment.urlAutos}/${auto._id}`);
   }
 
-  addAutos(auto:Automovil):void{
-    this.http.post(`${environment.urlAutos}/${auto._id}`,auto);
+  addAutos(auto:Automovil){
+    return this.http.post(environment.urlAutos,auto);
   }
 }

@@ -59,7 +59,16 @@ export class ModalAgregarModificarComponent implements OnInit {
   }
 
   agregarAuto(){
-
+    this.arrySplit(this.modelosStr);
+    if(!this.isModelsCorrect) {
+      alert('Llene correctamente todos los campos!');
+      this.modelosStr = "";
+      return;
+    };
+    this.autosService.addAutos(this.auto).subscribe((res)=>{
+      alert("Agregado con exito!");
+      console.log(res);
+    });
   }
 
   arrySplit(str: string) {
@@ -80,4 +89,5 @@ export class ModalAgregarModificarComponent implements OnInit {
     if(this.isAddMode) this.agregarAuto();
     else this.actualizarAuto(this.auto);
   }
+
 }

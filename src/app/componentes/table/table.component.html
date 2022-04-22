@@ -32,6 +32,8 @@
         [ellipses]="false" [boundaryLinks]="true" [collectionSize]="autos.length"></ngb-pagination>
 </div>
 
+<!-- <p *ngIf="!isLoading"><ngb-progressbar [value]="500" type="primary" [animated]="true" height="40px" [striped]="true"></ngb-progressbar></p> -->
+
 <div *ngIf="!isLoading" class="d-flex centrarSpinner">
     <div class="spinner-border text-primary" role="status"></div>
 </div>
