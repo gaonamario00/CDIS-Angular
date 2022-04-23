@@ -13,8 +13,7 @@ export class AutosService {
 
   constructor(
     private http: HttpClient,
-    private msgService: MessagesService,
-    private toastr: ToastrService
+    private msgService: MessagesService    
     ) { }
 
   getAutos(): Observable<any>{
@@ -31,7 +30,6 @@ export class AutosService {
       catchError(this.handleError<any>('updateAutos')),
       tap(()=>{ 
         this.msgService.add('Se ha actualizado un registro');
-        this.toastr.info('Auto actualizado!');
        })
     );
   }
@@ -41,7 +39,6 @@ export class AutosService {
       catchError(this.handleError<any>('deleteAutos')),
       tap(()=>{ 
         this.msgService.add('Se ha eliminado un registro');
-        this.toastr.error('Auto eliminado');
       })
     );
   }
@@ -51,7 +48,6 @@ export class AutosService {
       catchError(this.handleError<any>('addAutos')),
       tap(()=>{ 
         this.msgService.add('Se ha agregado un registro');
-        this.toastr.success('Auto agregado!');
       })
     );
   }

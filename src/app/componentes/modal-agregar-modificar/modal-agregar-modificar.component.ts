@@ -52,11 +52,7 @@ export class ModalAgregarModificarComponent implements OnInit {
       this.modelosStr = "";
       return;
     };
-    this.activeModal.close(this.auto)
-    // this.autosService.updateAutos(auto).subscribe((res: any) => {
-    //   alert('Registro actualizado con exito!');
-    //   this.activeModal.close();
-    // });
+    this.activeModal.close(this.auto);
   }
 
   agregarAuto(){
@@ -67,10 +63,6 @@ export class ModalAgregarModificarComponent implements OnInit {
       return;
     };
     this.activeModal.close(this.auto)
-    // this.autosService.addAutos(this.auto).subscribe((res)=>{
-    //   alert("Agregado con exito!");
-    //   console.log(res);
-    // });
   }
 
   arrySplit(str: string) {
@@ -83,7 +75,7 @@ export class ModalAgregarModificarComponent implements OnInit {
       }
       this.modelos.push(num);
     });
-    console.log(this.modelos);
+    // console.log(this.modelos);
     this.auto.modelos = this.modelos;
   }
 

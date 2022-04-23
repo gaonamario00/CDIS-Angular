@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 import { AutosService } from 'src/app/services/autos.service';
 import { Automovil } from '../../models/models';
 import { ModalAgregarModificarComponent } from '../modal-agregar-modificar/modal-agregar-modificar.component';
@@ -21,19 +22,16 @@ export class TableComponent implements OnInit {
 
   constructor(
     private autosService: AutosService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
     this.autosService.getAutos().subscribe((data: any) => {
       this.autos = data.data;
-      console.log(this.autos);
       this.isLoading = true;
     });
   }
-
-  //TO DO
-  // ACTIVIDAD #17 ARREGLAR MODALES
 
   open(isAddMode: boolean, auto?: Automovil) {
     const modalRef = this.modalService.open(ModalAgregarModificarComponent);
@@ -43,17 +41,15 @@ export class TableComponent implements OnInit {
     modalRef.result.then(
       (auto) => {
         if (isAddMode) {
-          console.log('Agregar mode');
-          console.log(auto);
+          if(auto == 'Close click') return;
           this.autosService.addAutos(auto).subscribe((res) => {
-            console.log('Agregado con exito!');
+            this.toastr.success('Auto agregado!');
             this.ngOnInit();
           });
         } else {
-          console.log('Editar mode');
-          console.log(auto);
+          if(auto == 'Close click') return;
           this.autosService.updateAutos(auto).subscribe((res: any) => {
-            console.log('Actualizado con exito!');
+            this.toastr.info('Auto actualizado!');
             this.ngOnInit();
           });
         }
@@ -70,7 +66,9 @@ export class TableComponent implements OnInit {
 
     modalRef.result.then(
       (autoTemp) => {
+        if(autoTemp == 'Close click') return;
         this.autosService.deleteAuto(autoTemp).subscribe((res) => {
+          this.toastr.error('Auto eliminado');
           this.ngOnInit();
         });
       },

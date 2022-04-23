@@ -21,7 +21,6 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     this.autoService.getAutos().subscribe((data:any)=>{
       this.autos = data.data;
-      console.log(this.autos);
       this.isLoading = true;
     });
   }
