@@ -11,11 +11,6 @@
 .boton{
     width: 100%;
     border-radius: 0%;
+    border: 1px solid #cdced1;
 }
 
-/* .tabla{
-    border-color: #aaaaaa;
-    border-width: 1px;
-    border-style: solid;
-    display: block;
-} */

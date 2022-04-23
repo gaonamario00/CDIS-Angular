@@ -1,0 +1,15 @@
+.log{
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    margin: 0 auto;
+    width: 80%;
+    height: 600px;
+    margin-top: 20px;
+    padding: 10px;
+    overflow: scroll;
+    font-family: 'Consolas', monospace;
+}
+
+p{
+    margin: 0;
+}

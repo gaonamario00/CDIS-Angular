@@ -9,6 +9,7 @@ export class VistasComponent implements OnInit {
 
   isLista: boolean = true;
   isTable:boolean = false;
+  isLog: boolean = false;
 
   constructor() { }
 
@@ -18,11 +19,19 @@ export class VistasComponent implements OnInit {
   lista(){
     this.isLista = true;
     this.isTable = false;
+    this.isLog = false;
   }
 
   table(){
-    this.isLista = false;
     this.isTable = true;
+    this.isLista = false;
+    this.isLog = false;
+  }
+
+  log(){
+    this.isLog = true;
+    this.isLista = false;
+    this.isTable = false;
   }
 
 }

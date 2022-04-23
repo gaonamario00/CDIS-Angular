@@ -16,6 +16,9 @@ import { ModalConfirmComponent } from './componentes/modal-confirm/modal-confirm
 import { ModelsInputDirective } from './directives/models-input.directive';
 import { FormatoModeloPipe } from './pipes/formato-modelo.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LogComponent } from './componentes/log/log.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ModalConfirmComponent,
     ModelsInputDirective,
     FormatoModeloPipe,
+    LogComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      countDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
